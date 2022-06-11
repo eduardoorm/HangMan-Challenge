@@ -1,7 +1,6 @@
-export const esLetra = (value) =>{
-    const letras = ["a","b","c","d","e","f","g","h","i","j","k","l","m","ñ","o","p","q","r","s","t","u","v","w","x","y","z"];
+export const esLetra = (value,charMayus) =>{
     let verificarLetra;
-    letras.forEach(element => {
+    charMayus.forEach(element => {
          if(element==value) return verificarLetra=true;
     });
     return verificarLetra;

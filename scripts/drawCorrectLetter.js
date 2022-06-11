@@ -11,7 +11,6 @@ export const drawCorrectLetter = (valueKey)=>{
         let index = palabra.indexOf(valueKey);
         if(palabra.includes(valueKey))
          {
-            console.log("entro aquí");
             textValues[index].textContent=valueKey;
             verifyWin();  
         }
