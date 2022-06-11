@@ -8,10 +8,18 @@ export const drawCorrectLetter = (valueKey)=>{
     const textValues = document.querySelectorAll(".line");
 
     if((cantIncorrectWord.length<=8)){
-        let index = palabra.indexOf(valueKey);
         if(palabra.includes(valueKey))
          {
-            textValues[index].textContent=valueKey;
+            let indices=[];
+            let index = palabra.indexOf(valueKey);
+            while(index!=-1){
+                console.log("entra al while");
+                indices.push(index);
+                index= palabra.indexOf(valueKey,index+1); 
+             }
+            indices.forEach((idx) => {
+                textValues[idx].textContent=valueKey;
+            })
             verifyWin();  
         }
         else if(textValues.length!=0){drawIncorrectLetter(valueKey,cantIncorrectWord.length);}

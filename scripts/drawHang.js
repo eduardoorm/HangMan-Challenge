@@ -1,16 +1,12 @@
 export const drawHang= (cantErros) => {
-    var canvas = document.getElementById("board");
-    var ctx = canvas.getContext("2d");
-    /*la base  */
+    let canvas = document.getElementById("board");
+    let ctx = canvas.getContext("2d");
     ctx.lineWidth=2;
     ctx.strokeStyle = "blue";
     switch (cantErros>0){
         case (cantErros==1):
             /*la base  */          
             ctx.beginPath();
-            ctx.moveTo(200,600);
-            ctx.lineTo(20,600);
-            ctx.lineTo(380,600);
             ctx.moveTo(200,600);
             ctx.lineTo(200,200)
             ctx.stroke();

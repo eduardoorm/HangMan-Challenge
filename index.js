@@ -18,7 +18,7 @@ const inputAddWord  =document.querySelector("[addWord]");
 const btnSaveAndStart= document.querySelector(".btn__saveAndStart");
 const labelWarningAddWord= document.querySelector(".container__addWord__warning");
 btnSaveAndStart.addEventListener("click",()=>{
-    const value = inputAddWord.value;
+    const value = inputAddWord.value.trim();
     if(!value){
         labelWarningAddWord.textContent="Debes ingresar como mínimo un caracter";
         labelWarningAddWord.classList.add("msg__error")
@@ -46,7 +46,7 @@ btnAddWord.addEventListener("click",()=>{
 btnStartGame.addEventListener("click",()=>{
     containerMenu.classList.add("hidden");
     containerGame.classList.remove("hidden");
-    dibujarTablero()
+    crearPalabraSecreta();
 })
 
 btnNewGame.addEventListener("click",crearPalabraSecreta);
