@@ -117,6 +117,9 @@
 .bg__White{
     background: white;
 }
+.container__menu__remember{
+    margin-top: 1em;
+}
 
 /*Buttons*/
 
